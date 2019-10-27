@@ -13,10 +13,13 @@ public class App {
 		
 		// Get Bean
 		Coach coach = context.getBean("pingPongCoach", Coach.class);
+		Coach coach2 = context.getBean("swimCoach", Coach.class);
 		
 		// Use the Bean
 		System.out.println(coach.getDailyWorkout());
 		System.out.println(coach.getDailyFortune());
+		System.out.println(coach2.getDailyWorkout());
+		System.out.println(coach2.getDailyFortune());
 		
 		if(coach instanceof PingPongCoach) {
 			System.out.println(((PingPongCoach)coach).getPaddleName());
